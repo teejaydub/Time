@@ -1,0 +1,25 @@
+Subversion
+Persist the category setting.
+Add a per-class  hours setting.
+Add duration to entry screen.
+Add archiving old entries to a named file or folder.
+Enter should edit a time record.
+
+Better file format
+	If we supported SQL, could do more interesting things - filtering, sorting, etc.
+		NexusDB embedded is free on the D2006 extras CD.
+
+archive data
+	selected classes
+	before a given date
+	submitted & paid
+		leave one in place so the class stays?
+			or, rework to have a real client table?
+improve Open
+	start from the MRU location
+when the from time passes the to time, increment the to time as well.
+make sure "12:0" doesn't appear in either time on open.
+
+New/Delete/Save As
+	New should bring up User Info after creating the database.
+	

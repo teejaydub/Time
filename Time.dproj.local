@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2012/02/03 12:06:08.579.pas,C:\TJW\Dev\Time\Unit1.pas=C:\TJW\Dev\Time\HoursWorkedChart.pas</Transaction>
+    <Transaction>2012/02/03 12:06:08.579.dfm,C:\TJW\Dev\Time\Unit1.dfm=C:\TJW\Dev\Time\HoursWorkedChart.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
