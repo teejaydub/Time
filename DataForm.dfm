@@ -1,34 +1,36 @@
 object HoursData: THoursData
+  OnCreate = DataModuleCreate
   OldCreateOrder = True
   Height = 309
-  HorizontalOffset = 481
-  VerticalOffset = 183
-  Width = 484
-  object HoursSrc: TDatasource
+  HorizontalOffset = 1185
+  VerticalOffset = 422
+  Width = 451
+  object HoursSrc: TDataSource
     DataSet = Hours
     left = 224
     top = 82
   end
-  object UserInfoSrc: TDatasource
+  object UserInfoSrc: TDataSource
     DataSet = UserInfo
     left = 224
     top = 24
   end
   object Connection: TZConnection
-    UTF8StringsAsWideField = False
-    PreprepareSQL = False
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = False
     Properties.Strings = (
       'PreprepareSQL='
     )
     TransactIsolationLevel = tiRepeatableRead
-    Connected = True
     DesignConnection = True
+    AfterConnect = ConnectionAfterConnect
     HostName = 'localhost'
     Port = 0
-    Database = 'C:\TJW\Dev\Time\TIME.FDB'
+    Database = 'time.sqlite'
     User = 'tjw'
     Password = 'funstuff'
-    Protocol = 'firebird-2.5'
+    Protocol = 'sqlite-3'
+    LibraryLocation = '/usr/lib64/libfbembed.so'
     left = 32
     top = 24
   end

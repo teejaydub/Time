@@ -1,7 +1,7 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="9"/>
+    <Version Value="10"/>
     <PathDelim Value="\"/>
     <General>
       <SessionStorage Value="InProjectDir"/>
@@ -13,7 +13,6 @@
       <XPManifest>
         <DpiAware Value="True"/>
       </XPManifest>
-      <Icon Value="0"/>
     </General>
     <i18n>
       <EnableI18N LFM="False"/>
@@ -34,34 +33,37 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="9">
+    <RequiredPackages Count="10">
       <Item1>
-        <PackageName Value="ZVDateTimeCtrls"/>
+        <PackageName Value="DateTimeCtrls"/>
       </Item1>
       <Item2>
-        <PackageName Value="tjw"/>
+        <PackageName Value="zcore"/>
       </Item2>
       <Item3>
-        <PackageName Value="lazreportpdfexport"/>
+        <PackageName Value="tjw"/>
       </Item3>
       <Item4>
-        <PackageName Value="lazreport"/>
+        <PackageName Value="lazreportpdfexport"/>
       </Item4>
       <Item5>
-        <PackageName Value="lazmrumenu"/>
+        <PackageName Value="lazreport"/>
       </Item5>
       <Item6>
-        <PackageName Value="zcomponent"/>
+        <PackageName Value="lazmrumenu"/>
       </Item6>
       <Item7>
-        <PackageName Value="SQLDBLaz"/>
+        <PackageName Value="zcomponent"/>
       </Item7>
       <Item8>
-        <PackageName Value="FCL"/>
+        <PackageName Value="SQLDBLaz"/>
       </Item8>
       <Item9>
-        <PackageName Value="LCL"/>
+        <PackageName Value="FCL"/>
       </Item9>
+      <Item10>
+        <PackageName Value="LCL"/>
+      </Item10>
     </RequiredPackages>
     <Units Count="5">
       <Unit0>
@@ -74,7 +76,6 @@
         <ComponentName Value="HoursData"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <UnitName Value="DataForm"/>
       </Unit1>
       <Unit2>
         <Filename Value="Grid.pas"/>
@@ -82,7 +83,6 @@
         <ComponentName Value="GridForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Grid"/>
       </Unit2>
       <Unit3>
         <Filename Value="Entry.pas"/>
@@ -90,7 +90,6 @@
         <ComponentName Value="EntryForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Entry"/>
       </Unit3>
       <Unit4>
         <Filename Value="UserInfo.pas"/>
@@ -98,7 +97,6 @@
         <ComponentName Value="UserInfoForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="UserInfo"/>
       </Unit4>
     </Units>
   </ProjectOptions>
@@ -107,6 +105,7 @@
     <PathDelim Value="\"/>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="..\lazarus-components\zeos-7.1.3a-stable\src\core"/>
     </SearchPaths>
     <Parsing>
       <SyntaxOptions>
@@ -123,12 +122,6 @@
         </Win32>
       </Options>
     </Linking>
-    <Other>
-      <CompilerMessages>
-        <MsgFileName Value=""/>
-      </CompilerMessages>
-      <CompilerPath Value="$(CompPath)"/>
-    </Other>
   </CompilerOptions>
   <Debugging>
     <Exceptions Count="3">

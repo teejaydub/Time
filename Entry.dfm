@@ -1,7 +1,7 @@
 object EntryForm: TEntryForm
-  Left = 337
+  Left = 1340
   Height = 375
-  Top = 172
+  Top = 184
   Width = 326
   HorzScrollBar.Visible = False
   BorderIcons = [biSystemMenu]
@@ -15,7 +15,7 @@ object EntryForm: TEntryForm
   Font.Name = 'MS Sans Serif'
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '1.0.1.3'
+  LCLVersion = '1.6.4.0'
   object Panel1: TPanel
     Left = 0
     Height = 41
@@ -125,7 +125,7 @@ object EntryForm: TEntryForm
       end
       object ClassEdit: TDBEdit
         Left = 78
-        Height = 21
+        Height = 23
         Top = 230
         Width = 100
         DataField = 'CLASS'
@@ -136,7 +136,7 @@ object EntryForm: TEntryForm
       end
       object DescEdit: TDBEdit
         Left = 78
-        Height = 21
+        Height = 23
         Top = 253
         Width = 224
         DataField = 'DESCRIPTION'
@@ -145,11 +145,11 @@ object EntryForm: TEntryForm
         MaxLength = 0
         TabOrder = 3
       end
-      object FromTime: TZVDateTimePicker
+      object FromTime: TDateTimePicker
         Left = 78
-        Height = 21
+        Height = 19
         Top = 184
-        Width = 72
+        Width = 77
         CenturyFrom = 1941
         MaxDate = 2958465
         MinDate = -53780
@@ -163,16 +163,17 @@ object EntryForm: TEntryForm
         TimeDisplay = tdHM
         DateMode = dmUpDown
         Date = 41178
-        Time = 0.5476118402803
+        Time = 0.547611840280297
         UseDefaultSeparators = True
         Cascade = True
-        MinuteStep = 5
+        HideDateTimeParts = []
+        MonthNames = 'Long'
       end
-      object ToTime: TZVDateTimePicker
+      object ToTime: TDateTimePicker
         Left = 78
-        Height = 21
+        Height = 19
         Top = 207
-        Width = 72
+        Width = 77
         CenturyFrom = 1941
         MaxDate = 2958465
         MinDate = -53780
@@ -186,10 +187,11 @@ object EntryForm: TEntryForm
         TimeDisplay = tdHM
         DateMode = dmUpDown
         Date = 41178
-        Time = 0.5476118402803
+        Time = 0.547611840280297
         UseDefaultSeparators = True
         Cascade = True
-        MinuteStep = 5
+        HideDateTimeParts = []
+        MonthNames = 'Long'
       end
       object Submitted: TDBCheckBox
         Left = 77

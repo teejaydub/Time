@@ -1,4 +1,8 @@
-Subversion
+Port to Lazarus and Linux
+    Set it up with SQLite.
+       Have to recreate the DB there, I guess.
+       I wanted a more self-contained, lower-maintenance option anyway.
+
 Persist the category setting.
 Add a per-class  hours setting.
 Add duration to entry screen.

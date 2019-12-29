@@ -112,7 +112,18 @@ implementation
 
 {$R *.dfm}
 
-uses DataForm, DateUtils, Entry, UserInfo, LCLType, ZVDateTimePicker, ZDataset;
+uses DataForm, DateUtils, Entry, UserInfo, LCLType, DateTimePicker, ZDataset;
+
+function TruncToMultiple(x, multiple: Integer): Integer;
+begin
+  Result := (x div multiple) * multiple;
+end;
+
+function TruncTime(t: TDateTime; minuteResolution: Integer): TDateTime;
+begin
+  Result := RecodeMinute(t, TruncToMultiple(MinuteOf(t), 5));
+  Result := RecodeSecond(Result, 0);
+end;
 
 procedure TGridForm.FormShow(Sender: TObject);
 begin
@@ -369,14 +380,14 @@ end;
 procedure TGridForm.MarkSubmittedClick(Sender: TObject);
 var
   i: Integer;
-  oldSpot: TBookmarkStr;
+  oldSpot: TBookmark;
 begin
   with HoursData.Hours do
   begin
     DisableControls;
     oldSpot := Bookmark;
     for i := 0 to DBGrid1.SelectedRows.Count - 1 do begin
-      Bookmark := TBookmarkStr(DBGrid1.SelectedRows.Items[i]);
+      Bookmark := TBookmark(DBGrid1.SelectedRows.Items[i]);
       Edit;
       HoursData.HoursSubmitted.AsBoolean :=
         not HoursData.HoursSubmitted.AsBoolean;
@@ -392,14 +403,14 @@ end;
 procedure TGridForm.MarkPaidClick(Sender: TObject);
 var
   i: Integer;
-  oldSpot: TBookmarkStr;
+  oldSpot: TBookmark;
 begin
   with HoursData.Hours do
   begin
     DisableControls;
     oldSpot := Bookmark;
     for i := 0 to DBGrid1.SelectedRows.Count - 1 do begin
-      Bookmark := TBookmarkStr(DBGrid1.SelectedRows.Items[i]);
+      Bookmark := TBookmark(DBGrid1.SelectedRows.Items[i]);
       Edit;
       HoursData.HoursPaid.AsBoolean := not HoursData.HoursPaid.AsBoolean;
       Post;
@@ -420,7 +431,7 @@ begin
 
     EntryForm.Caption := 'Start Work';
     EntryForm.ActiveControl := EntryForm.FromTime;
-    EntryForm.FromTime.SelectMinute;
+    EntryForm.FromTime.SelectTime;
     EntryForm.ShowModal;
 
     UpdateAll;
@@ -514,7 +525,7 @@ begin
 
     EntryForm.Caption := 'End Work';
     EntryForm.ActiveControl := EntryForm.ToTime;
-    EntryForm.ToTime.SelectMinute;
+    EntryForm.ToTime.SelectTime;
     EntryForm.ShowModal;
   end;
   UpdateAll;

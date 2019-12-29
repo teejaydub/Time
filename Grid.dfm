@@ -5,7 +5,7 @@ object GridForm: TGridForm
   Width = 652
   ActiveControl = StartBtn
   Caption = 'Time sheet'
-  ClientHeight = 568
+  ClientHeight = 567
   ClientWidth = 652
   Color = clBtnFace
   Font.Color = clWindowText
@@ -2825,7 +2825,7 @@ object GridForm: TGridForm
   OnKeyDown = DBGrid1KeyDown
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '1.0.1.3'
+  LCLVersion = '1.6.4.0'
   object Panel1: TPanel
     Left = 0
     Height = 41
@@ -2878,19 +2878,19 @@ object GridForm: TGridForm
   end
   object Panel2: TPanel
     Left = 0
-    Height = 497
+    Height = 496
     Top = 41
     Width = 652
     Align = alClient
     BevelInner = bvLowered
     BorderWidth = 4
     Caption = 'Panel2'
-    ClientHeight = 497
+    ClientHeight = 496
     ClientWidth = 652
     TabOrder = 0
     object DBGrid1: TDBGrid
       Left = 6
-      Height = 485
+      Height = 484
       Top = 6
       Width = 640
       Align = alClient
@@ -2959,7 +2959,7 @@ object GridForm: TGridForm
   object BottomPanel: TPanel
     Left = 0
     Height = 30
-    Top = 538
+    Top = 537
     Width = 652
     Align = alBottom
     ClientHeight = 30
@@ -2967,31 +2967,31 @@ object GridForm: TGridForm
     TabOrder = 2
     object Label2: TLabel
       Left = 256
-      Height = 14
+      Height = 13
       Top = 7
-      Width = 54
+      Width = 64
       Caption = 'Remaining:'
       ParentColor = False
     end
     object Label1: TLabel
       Left = 8
-      Height = 14
+      Height = 13
       Top = 7
-      Width = 61
+      Width = 72
       Caption = 'Hours today:'
       ParentColor = False
     end
     object Label3: TLabel
       Left = 131
-      Height = 14
+      Height = 13
       Top = 7
-      Width = 53
+      Width = 60
       Caption = 'This week:'
       ParentColor = False
     end
     object HoursToday: TEdit
       Left = 74
-      Height = 21
+      Height = 23
       Top = 4
       Width = 51
       Alignment = taCenter
@@ -3005,7 +3005,7 @@ object GridForm: TGridForm
     end
     object HoursWeek: TEdit
       Left = 189
-      Height = 21
+      Height = 23
       Top = 4
       Width = 51
       Alignment = taCenter
@@ -3019,7 +3019,7 @@ object GridForm: TGridForm
     end
     object Remaining: TEdit
       Left = 315
-      Height = 21
+      Height = 23
       Top = 4
       Width = 51
       Alignment = taCenter
@@ -3033,15 +3033,15 @@ object GridForm: TGridForm
     end
     object SelectedSumLabel: TLabel
       Left = 376
-      Height = 14
+      Height = 13
       Top = 7
-      Width = 46
+      Width = 52
       Caption = 'Selected:'
       ParentColor = False
     end
     object SelectedTotal: TEdit
       Left = 424
-      Height = 21
+      Height = 23
       Top = 4
       Width = 75
       Alignment = taCenter
@@ -3184,9 +3184,6 @@ object GridForm: TGridForm
     Title = 'Hours Summary'
     left = 264
     top = 80
-    ReportForm = {
-      19000000
-    }
   end
   object ReportExportPDF: TfrTNPDFExport
     left = 368
@@ -3202,12 +3199,12 @@ object GridForm: TGridForm
     left = 264
     top = 144
   end
-  object ReportUserInfoSrc: TDatasource
+  object ReportUserInfoSrc: TDataSource
     DataSet = HoursData.UserInfo
     left = 264
     top = 208
   end
-  object ReportHoursSrc: TDatasource
+  object ReportHoursSrc: TDataSource
     DataSet = HoursData.Hours
     left = 368
     top = 208

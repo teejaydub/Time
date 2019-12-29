@@ -11,11 +11,11 @@ uses
 {$ELSE}
   Interfaces,
 {$ENDIF}
-  Forms, zvdatetimectrls,
+  Forms, datetimectrls,
   DataForm in 'DataForm.pas' {HoursData: TDataModule},
   Grid in 'Grid.pas' {GridForm},
   Entry in 'Entry.pas',
-  UserInfo in 'UserInfo.pas', lazreportpdfexport {UserInfoForm};
+  UserInfo in 'UserInfo.pas', lazreportpdfexport;
 
 {$R *.res}
 

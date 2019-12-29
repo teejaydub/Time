@@ -56,6 +56,8 @@ type
     UserInfoPHONE: TStringField;
     UserInfoUSERNAME: TStringField;
     TimeSum: TZReadOnlyQuery;
+    procedure ConnectionAfterConnect(Sender: TObject);
+    procedure DataModuleCreate(Sender: TObject);
     procedure HoursAfterApplyUpdates(Sender: TObject);
   private
     { Private declarations }
@@ -78,6 +80,16 @@ procedure THoursData.HoursAfterApplyUpdates(Sender: TObject);
 begin
   // This is so the NETHOURS field, calculated by the server, can be refreshed.
   Hours.Refresh;
+end;
+
+procedure THoursData.ConnectionAfterConnect(Sender: TObject);
+begin
+
+end;
+
+procedure THoursData.DataModuleCreate(Sender: TObject);
+begin
+
 end;
 
 procedure THoursData.SaveAll;

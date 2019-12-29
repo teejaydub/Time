@@ -8,7 +8,7 @@ interface
 
 uses
   SysUtils, StdCtrls, Forms, ExtCtrls, Calendar, DbCtrls,
-  ZVDateTimePicker, Classes;
+  DateTimePicker, Classes;
 
 type
 
@@ -17,11 +17,11 @@ type
   TEntryForm = class(TForm)
     ClassEdit: TDBEdit;
     DescEdit: TDBEdit;
-    FromTime: TZVDateTimePicker;
+    FromTime: TDateTimePicker;
     Paid: TDBCheckBox;
     SetToStart: TButton;
     Submitted: TDBCheckBox;
-    ToTime: TZVDateTimePicker;
+    ToTime: TDateTimePicker;
     ScrollBox: TScrollBox;
     Label1: TLabel;
     Label2: TLabel;
